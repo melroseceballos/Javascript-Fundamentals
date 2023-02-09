@@ -62,4 +62,9 @@ const numArgs = function (...argument) {
 };
 
 
-//7.
+//7.done
+function reverseString (string) {
+    let array = string.split('');
+    return array.reverse().join('');
+    }
+    
