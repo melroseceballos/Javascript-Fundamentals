@@ -46,3 +46,14 @@ console.log(sum);
 }
 sumArray([1,2,3,4]);
 
+//5. Need to fix let product
+function multiplyArray (array){
+    let product= 1;
+for (let i = 1; i<array.length; i++) {
+product *= array [i]
+}
+console.log(product)
+}
+multiplyArray([1,2,3]);
+
+//6. 
