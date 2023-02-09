@@ -34,4 +34,15 @@ function isCharAVowel(char) {
     }
     }
     
-    //4.
+    //4. done
+
+    const sumArray = function (array) {
+let sum = 0;
+
+for (let i = 0; i<array.length; i++) {
+sum += array [i]
+}
+console.log(sum);
+}
+sumArray([1,2,3,4]);
+
