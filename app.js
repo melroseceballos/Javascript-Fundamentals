@@ -79,10 +79,14 @@ const longestStringInArray = function (arr){
     return longest.length;
     }
     
-//9. Cannot seem to get this right
-function stringsLongerThan (arr, num){
-    if (arr.length > num) stringsLongerThan.push(arr.length);{
-    return arr
+//9. done
+function stringsLongerThan (arr, num) {
+let strings = []
+for (let i = 0; i<arr.length; i++){
+    if(arr[i].length > length){
+        string.push(arr [i ])
     }
-    }
+} return strings;
+
+}
     console.log(stringsLongerThan(["hello", "hi", "when","where","who" ] , 5));
