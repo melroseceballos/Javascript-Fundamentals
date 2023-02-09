@@ -67,4 +67,15 @@ function reverseString (string) {
     let array = string.split('');
     return array.reverse().join('');
     }
+
+//.8
+const longestStringInArray = function (arr){
+    let longest= arr [0];
+    for (let i= 1; i<arr.length; i++){
+    if (arr[i].length > longest.length) {
+    longest = arr [i]
+    }
+    }
+    return longest.length;
+    }
     
