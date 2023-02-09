@@ -68,7 +68,7 @@ function reverseString (string) {
     return array.reverse().join('');
     }
 
-//.8
+//.8 done
 const longestStringInArray = function (arr){
     let longest= arr [0];
     for (let i= 1; i<arr.length; i++){
@@ -79,3 +79,10 @@ const longestStringInArray = function (arr){
     return longest.length;
     }
     
+//9. Cannot seem to get this right
+function stringsLongerThan (arr, num){
+    if (arr.length > num) stringsLongerThan.push(arr.length);{
+    return arr
+    }
+    }
+    console.log(stringsLongerThan(["hello", "hi", "when","where","who" ] , 5));
