@@ -5,117 +5,92 @@ function maxOfTwoNumbers(x, y) {
     } else {
         return y;
     }
-}
 
-// using ternary operator instead of if-else
-// function maxOfTwoNumbers(x, y) {
-//   return x >= y ? x : y;
-// }
+    // or more "elegantly" using the fantastic ternary expression!
+    // return  x >= y ? x : y;
+}
 
 console.log(maxOfTwoNumbers(3, 9));
 
 
-
-// 2.
-const maxOfThree = function (x, y, z) {
-    if (x >= y && x >= z) {
-        return x;
-    } else if (y >= x && y >= z) {
-        return y;
+//2. done
+const maxOfThree = function (a,b,c) {
+    if (a >= b && a >= c){
+    return a;
+    } else if (b >= a && b >= c){
+    return b;
     } else {
-        return z;
+    return c;
     }
-};
+    };
+    console.log(maxOfThree(5, 10, 1));
 
-console.log(maxOfThree(5, 10, 1));
+//3. done
+function isCharAVowel(char) {
+    if (char === "a" || char === "e" || char === "i" || char === "o" || char === "u" ) {
+    console.log("true");
+    } else {
+   return ("false");
+    
+    }
+    }
+    console.log(isCharAVowel('b'));
+    
+    //4. done
 
-// 3.
-function isCharAVowel(s) {
-    s = s.toLowerCase();
-    return ('aeiouy'.indexOf(s) > -1);
-    // or use ES2015's string.includes
-    // return 'aeiouy'.includes(s);
+    const sumArray = function (array) {
+let sum = 0;
+
+for (let i = 0; i<array.length; i++) {
+sum += array [i]
 }
-
-console.log(isCharAVowel('b'));
-
-// 4.
-const sumArray = function (arr) {
-    let sum = 0;
-    // the forEach method rocks!
-    arr.forEach(function (n) {
-        sum += n;
-    });
-    return sum;
-    // later, you will learn this is a good use case for the reduce method
-};
-
+return (sum);
+}
 console.log(sumArray([5, 10, 1]));
 
-// 5.
-function multiplyArray(arr) {
-    let product = 1;
-    // feel free to use a for loop or forEach if you want to really be cool!
-    for (let i = 0; i < arr.length; i++) {
-        product *= arr[i];
-    }
-    return product;
+//5. done
+function multiplyArray (array){
+    let product= 1;
+for (let i = 0; i<array.length; i++) {
+product *= array [i]
+}
+return (product)
 }
 
 console.log(multiplyArray([5, 10, 2]));
 
-// 6.
-const numArgs = function (...args) {
-    return args.length;
-    // or, without using a rest parameter
-    // return arguments.length;
+//6. done
+const numArgs = function (...argument) {
+    return argument.length;
 };
-
-
 
 console.log(numArgs('test', true, 5));
 
-// 7.
-function reverseString(s) {
-    // strings don't have a reverse method - but arrays do!
-    let arr = s.split('');
-    // let arr = Array.from(s);  <-- another way to create an array from an array-like object or iterable
-    return arr.reverse().join('');
-    // Yup, you can make it a one-liner if you wish
-    // return s.split('').reverse().join('');
-}
+//7.done
+function reverseString (string) {
+    let array = string.split('');
+    return array.reverse().join('');
+    }
 
 console.log(reverseString('rockstar'));
 
-// 8.
-const longestStringInArray = function (arr) {
-    let longest = 0;
-    // using forEach this time!
-    arr.forEach(function (s) {
-        if (s.length > longest) longest = s.length;
-    });
-    return longest;
-    // The Array.reduce method is cool for when you want a single 'thing' from an array
-    // return arr.reduce(function(longestThusFar, currentStr) {
-    //   return currentStr.length > longestThusFar.length ? currentStr.length : longestThusFar.length;
-    // }, 0);
-};
+//.8 done
+const longestStringInArray = function (arr){
+    let longest= arr [0];
+    for (let i= 1; i<arr.length; i++){
+    if (arr[i].length > longest.length) {
+    longest = arr [i]
+    }
+    }
+    return longest.length;
+    }
+    console.log(longestStringInArray(['say', 'hello', 'in', 'the', 'morning'])); 
+    
 
-console.log(longestStringInArray(['say', 'hello', 'in', 'the', 'morning']));
-
-// 9.
-function stringsLongerThan(arr, len) {
-    // now we're talking!
-    return arr.filter(function (s) {
-        return (s.length > len);
-    });
-    // don't sweat it - we'll be covering array iterator methods like filter quite a bit in the course
-    // Without the filter method...
-    // const strings = [];
-    // arr.forEach(function(s) {
-    //   if (s.length > len) strings.push(s);
-    // });
-    // return strings;
-};
-
+//9. done
+function stringsLongerThan (arr, len){
+return arr.filter(function (s){
+	return(s.length>len);
+});
+}
 console.log(stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3));
