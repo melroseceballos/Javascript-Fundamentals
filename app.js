@@ -23,16 +23,18 @@ const maxOfThree = function (a,b,c) {
     return c;
     }
     };
+    console.log(maxOfThree(5, 10, 1));
 
 //3. done
 function isCharAVowel(char) {
     if (char === "a" || char === "e" || char === "i" || char === "o" || char === "u" ) {
     console.log("true");
     } else {
-    console.log("false");
+   return ("false");
     
     }
     }
+    console.log(isCharAVowel('b'));
     
     //4. done
 
@@ -42,9 +44,9 @@ let sum = 0;
 for (let i = 0; i<array.length; i++) {
 sum += array [i]
 }
-console.log(sum);
+return (sum);
 }
-sumArray([1,2,3,4]);
+console.log(sumArray([5, 10, 1]));
 
 //5. done
 function multiplyArray (array){
@@ -52,21 +54,25 @@ function multiplyArray (array){
 for (let i = 0; i<array.length; i++) {
 product *= array [i]
 }
-console.log(product)
+return (product)
 }
-multiplyArray([2,2,3]);
+
+console.log(multiplyArray([5, 10, 2]));
 
 //6. done
 const numArgs = function (...argument) {
     return argument.length;
 };
 
+console.log(numArgs('test', true, 5));
 
 //7.done
 function reverseString (string) {
     let array = string.split('');
     return array.reverse().join('');
     }
+
+console.log(reverseString('rockstar'));
 
 //.8 done
 const longestStringInArray = function (arr){
@@ -78,15 +84,13 @@ const longestStringInArray = function (arr){
     }
     return longest.length;
     }
+    console.log(longestStringInArray(['say', 'hello', 'in', 'the', 'morning'])); 
     
-//9. done
-function stringsLongerThan (arr, num) {
-let strings = []
-for (let i = 0; i<arr.length; i++){
-    if(arr[i].length > length){
-        string.push(arr [i ])
-    }
-} return strings;
 
+//9. done
+function stringsLongerThan (arr, len){
+return arr.filter(function (s){
+	return(s.length>len);
+});
 }
-    console.log(stringsLongerThan(["hello", "hi", "when","where","who" ] , 5));
+console.log(stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3));
